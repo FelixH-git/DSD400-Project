@@ -18,7 +18,7 @@ const Login = () => {
 
             setEmail("");
             setPassword("");
-            alert("Item created successfully!");
+            alert(response.data.message);
         } catch (error) {
             console.error(error);
             alert(error);
