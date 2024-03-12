@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import CreateBook from '../components/createBook'
+import CreateUser from '../components/createUser'
+import Login from '../components/login'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,6 +12,8 @@ export default function Home() {
   return (
     <>
       <CreateBook></CreateBook>
+      <CreateUser></CreateUser>
+      <Login></Login>
     </>
   )
 }
