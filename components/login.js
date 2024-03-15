@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+
+
+
+
+
+
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -38,32 +44,45 @@ const Login = () => {
 
     return (
     <>
+
+        
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
-
-            <label htmlFor="email">email:</label>
+            <div class="divinput">
+            <div class="mb-3">
+            <label htmlFor="email" class="form-label">Email Address:</label>
             <input
-                type="text"
+                
+                class="form-control"
+                aria-describedby="emailHelp"
+                type="email"
                 id="email"
                 name="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
             />
+            
+            </div>
+            </div>
 
-            <label htmlFor="password">password:</label>
+            <div class="divinput">
+            <label htmlFor="password" class="form-label">Password:</label>
             <input
-                type="text"
+                
+                class="form-control"
+                aria-describedby="emailHelp"
+                type="password"
                 id="password"
                 name="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
             />
-
-            <button type="submit">login</button>
+            </div>
+            <button type="submit" class="btn btn-primary">login</button>
         </form>
 
         <form onSubmit={handleLogout}>
-            <button type="submit">Logout</button>
+            <button type="submit" class="btn btn-primary">Logout</button>
         </form>
     </>
     );
