@@ -28,37 +28,56 @@ const CreateBook = () => {
     };
 
     return (
+        
         <form onSubmit={handleSubmit}>
-            <h1>Add new book</h1>
-
-            <label htmlFor="title">title:</label>
+            <p class="formtitle">Lägg till ny bok</p>
+            <div class="divinput">
+            <div class="mb-3">
+            <label htmlFor="title" class="labeltitle">Titel: </label>
             <input
+                class="form-control"
                 type="text"
                 id="title"
                 name="title"
+                placeholder="Boktitel"
                 value={title}
                 onChange={(event) => setTitle(event.target.value)}
             />
+            </div>
+            </div>
 
-            <label htmlFor="img">img:</label>
+            <div class="divinput">
+            <label htmlFor="img" class="labeltitle">Bild: </label>
             <input
+                class="form-control"
                 type="text"
                 id="img"
                 name="img"
+                placeholder="JAKOB FIXA BILD"
                 value={img}
                 onChange={(event) => setImg(event.target.value)}
             />
-
-            <label htmlFor="price">price:</label>
+            </div>
+            <div class="divinput">
+            <div class="mb-3">
+            <label htmlFor="price" class="labeltitle">Pris: </label>
             <input
+                class="form-control"
                 type="text"
                 id="price"
                 name="price"
+                placeholder="Pris på bok"
                 value={price}
                 onChange={(event) => setPrice(event.target.value)}
             />
-
-            <button type="submit">submit</button>
+            </div>
+            </div>
+            
+            
+            <div class="divinput">
+            <button type="submit" class="btn btn-primary">Lägg till bok</button>
+            </div>
+            
         </form>
     );
 };

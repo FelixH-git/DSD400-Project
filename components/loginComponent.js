@@ -47,7 +47,7 @@ const LoginComponent = () => {
 
         
         <form onSubmit={handleSubmit}>
-            <h1>Login</h1>
+        <p class="formtitle">Logga in</p>
             <div class="divinput">
             <div class="mb-3">
             <label htmlFor="email" class="form-label">Email Address:</label>
@@ -55,7 +55,7 @@ const LoginComponent = () => {
                 
                 class="form-control"
                 aria-describedby="emailHelp"
-                type="email"
+                type="text" // Ändra till type="email" -- text för testing av admin
                 id="email"
                 name="email"
                 value={email}
