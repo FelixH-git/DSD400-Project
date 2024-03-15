@@ -19,7 +19,8 @@ const bookSchema = new Schema({
         required: true,
     },
     reserved: {
-        type: String,   
+        type: Schema.Types.ObjectId,
+        ref: 'User', 
     },
 });
 
