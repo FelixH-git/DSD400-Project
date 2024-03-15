@@ -1,4 +1,4 @@
-import ListGroup from "./ListGroup";
+import ListGroup from "./ListGroupComponent";
 import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.css';
