@@ -13,6 +13,7 @@
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.3",
     "cookie": "^0.6.0",
     "fs": "^0.0.1-security",
     "mongoose": "^8.2.1",

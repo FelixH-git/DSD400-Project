@@ -2,9 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import CreateBook from '../components/createBook'
-import CreateUser from '../components/createUser'
-import Login from '../components/login'
+import CreateBook from '../components/createBookComponent'
+import CreateUser from '../components/createUserComponent'
 import ReserveBook from '../components/reserveBook'
 import ViewBook from '../components/ViewBook'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,7 +17,6 @@ export default function Home() {
       <CreateBook></CreateBook>
       <ReserveBook></ReserveBook>
       <CreateUser></CreateUser>
-      <Login></Login>
       <ViewBook />
     </>
   )
