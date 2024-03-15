@@ -8,6 +8,7 @@ import Login from '../components/login'
 import ReserveBook from '../components/reserveBook'
 import ViewBook from '../components/ViewBook'
 import 'bootstrap/dist/css/bootstrap.css';
+import React from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
