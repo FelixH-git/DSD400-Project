@@ -6,6 +6,7 @@ import CreateBook from '../components/createBook'
 import CreateUser from '../components/createUser'
 import Login from '../components/login'
 import ReserveBook from '../components/reserveBook'
+import ViewBook from '../components/ViewBook'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function Home() {
       <ReserveBook></ReserveBook>
       <CreateUser></CreateUser>
       <Login></Login>
+      <ViewBook />
     </>
   )
 }
