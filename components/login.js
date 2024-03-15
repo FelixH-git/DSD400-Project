@@ -25,7 +25,19 @@ const Login = () => {
         }
     };
 
+    const handleLogout = async (event) => {
+        try {
+            const response = await axios.get("/api/user/logout");
+
+            alert(response.data.message);
+        } catch (error) {
+            console.error(error);
+            alert(error);
+        }
+    };
+
     return (
+    <>
         <form onSubmit={handleSubmit}>
             <h1>Login</h1>
 
@@ -49,6 +61,11 @@ const Login = () => {
 
             <button type="submit">login</button>
         </form>
+
+        <form onSubmit={handleLogout}>
+            <button type="submit">Logout</button>
+        </form>
+    </>
     );
 };
 

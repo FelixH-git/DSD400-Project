@@ -26,7 +26,7 @@ const CreateUser = () => {
             setEmail("");
             setPassword("");
             setPhone("");
-            alert("Item created successfully!");
+            alert(response.data.message);
         } catch (error) {
             console.error(error);
             alert(error);

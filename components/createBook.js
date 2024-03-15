@@ -20,7 +20,7 @@ const CreateBook = () => {
             setTitle("");
             setImg("");
             setPrice("");
-            alert("Item created successfully!");
+            alert(response.data.message);
         } catch (error) {
             console.error(error);
             alert(error);
@@ -31,7 +31,7 @@ const CreateBook = () => {
         <form onSubmit={handleSubmit}>
             <h1>Add new book</h1>
 
-            <label htmlFor="name">title:</label>
+            <label htmlFor="title">title:</label>
             <input
                 type="text"
                 id="title"
@@ -40,7 +40,7 @@ const CreateBook = () => {
                 onChange={(event) => setTitle(event.target.value)}
             />
 
-            <label htmlFor="description">img:</label>
+            <label htmlFor="img">img:</label>
             <input
                 type="text"
                 id="img"
@@ -49,7 +49,7 @@ const CreateBook = () => {
                 onChange={(event) => setImg(event.target.value)}
             />
 
-            <label htmlFor="img">price:</label>
+            <label htmlFor="price">price:</label>
             <input
                 type="text"
                 id="price"

@@ -11,6 +11,7 @@ const userSchema = new Schema({
     },
     isAdmin: {
         type: Boolean,
+        default: false,
     },
     phone: {
         type: Number,
