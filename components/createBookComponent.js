@@ -30,12 +30,12 @@ const CreateBook = () => {
     return (
         
         <form onSubmit={handleSubmit}>
-            <p class="formtitle">Lägg till ny bok</p>
-            <div class="divinput">
-            <div class="mb-3">
-            <label htmlFor="title" class="labeltitle">Titel: </label>
+            <p className="formtitle">Lägg till ny bok</p>
+            <div className="divinput">
+            <div className="mb-3">
+            <label htmlFor="title" className="labeltitle">Titel: </label>
             <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="title"
                 name="title"
@@ -46,10 +46,10 @@ const CreateBook = () => {
             </div>
             </div>
 
-            <div class="divinput">
-            <label htmlFor="img" class="labeltitle">Bild: </label>
+            <div className="divinput">
+            <label htmlFor="img" className="labeltitle">Bild: </label>
             <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="img"
                 name="img"
@@ -58,11 +58,11 @@ const CreateBook = () => {
                 onChange={(event) => setImg(event.target.value)}
             />
             </div>
-            <div class="divinput">
-            <div class="mb-3">
-            <label htmlFor="price" class="labeltitle">Pris: </label>
+            <div className="divinput">
+            <div className="mb-3">
+            <label htmlFor="price" className="labeltitle">Pris: </label>
             <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="price"
                 name="price"
@@ -74,8 +74,8 @@ const CreateBook = () => {
             </div>
             
             
-            <div class="divinput">
-            <button type="submit" class="btn btn-primary">Lägg till bok</button>
+            <div className="divinput">
+            <button type="submit" className="btn btn-primary">Lägg till bok</button>
             </div>
             
         </form>
