@@ -1,9 +1,7 @@
 import { useState } from "react";
 
-
 function ListGroup({ books, heading, onSelectItem }) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
 
   const handleReserveClick = async (bookId) => {
     try {
@@ -23,6 +21,8 @@ function ListGroup({ books, heading, onSelectItem }) {
       alert(error.message);
     }
   };
+
+  const baseUrl = '/img/upload/';
 
   return (
     <>
@@ -45,14 +45,25 @@ function ListGroup({ books, heading, onSelectItem }) {
             <div className="d-flex justify-content-between align-items-center">
               <div>
                 <h5 className="mb-1">{book.title}</h5>
-                <img src={book.img} alt={book.title} style={{ maxWidth: "100px" }} />
+                {book.img && (
+                  <img
+                    src={baseUrl + book.img} 
+                    alt={book.title}
+                    style={{ maxWidth: "100px" }}
+                  />
+                )}
                 <p className="mb-1">Price: {book.price}</p>
                 <p className="mb-1">Seller email: {book.owner.email}</p>
                 <p className="mb-1">Seller phone: {book.owner.phone}</p>
                 {book.reserved ? (
                   <p className="mb-1">Reserved by: {book.reserved.email}</p>
                 ) : (
-                  <button className="btn btn-primary" onClick={() => handleReserveClick(book._id)}>Reserve</button>
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => handleReserveClick(book._id)}
+                  >
+                    Reserve
+                  </button>
                 )}
               </div>
             </div>
