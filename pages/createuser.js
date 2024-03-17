@@ -1,13 +1,13 @@
 
 
 import React from 'react'
-import Signup from '../components/signUpComponent';
+import CreateUser from '../components/signUpComponent';
 
 
 export default function signuptest() {
   return (
     <>
-      <Signup />
+      <CreateUser />
     </>
   )
 }

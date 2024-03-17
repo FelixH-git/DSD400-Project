@@ -34,19 +34,25 @@ const CreateUser = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <div className='Allt'>
+        <div class="wrapper">
+        <form class="Allt" onSubmit={handleSubmit}>
             <h1>Add new User</h1>
 
             <label htmlFor="email">email:</label>
+            <div class="input_box">
             <input
+                placeholder="Email"
                 type="text"
                 id="email"
                 name="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
             />
-
+            <i class='bx bxs-envelope'></i>
+            </div>
             <label htmlFor="password">password:</label>
+            <div class="input_box">
             <input
                 type="password"
                 id="password"
@@ -54,9 +60,11 @@ const CreateUser = () => {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
             />
-
+            <i class='bx bxs-user'></i>
+            </div>
 
             <label htmlFor="phone">phone:</label>
+            <div class="input_box">
             <input
                 type="text"
                 id="phone"
@@ -64,10 +72,13 @@ const CreateUser = () => {
                 value={phone}
                 onChange={(event) => setPhone(event.target.value)}
             />
+            </div>
 
 
-            <button type="submit">submit</button>
+            <button type="submit" onClick="" class="btn">submit</button>
         </form>
+        </div>
+        </div>
     );
 };
 
