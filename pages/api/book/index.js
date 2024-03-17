@@ -77,7 +77,7 @@ export default async function handler(req, res) {
         });
 
         const savedBook = await book.save();
-        return res.status(200).json(savedBook);
+        return res.status(200).json({message:savedBook});
       });
     } catch (error) {
       return res.status(500).json({ success: false, error: error.message });
