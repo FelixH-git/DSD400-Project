@@ -1,5 +1,6 @@
 
 
+
 .divinput {
   max-height: 100%;
   max-width: 100%;
@@ -29,6 +30,8 @@
 /* NEDANFÖR ÄR CSS FÖR NIHADS KOD ------------------------------------------------------------------------- */
 
 *{
+  background-color: rgb(28, 162, 202);
+  background: rgb(28, 162, 202);
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
@@ -45,7 +48,7 @@ body{
 }
 .wrapper{
   width: 420px;
-  color: #fff;
+  color: #685f5f;
   border-radius: 10px;
   padding: 30px 40px;
 }
@@ -68,11 +71,11 @@ body{
   border: 2px solid rgba(255, 255, 255, .2);
   border-radius: 40px;
   font-size: 16px;
-  color: #fff;
+  color: #5a5050;
   padding: 20px 45px 20px 20px;
 } 
 .input_box input::placeholder{
-  color: #fff;
+  color: #796a6a;
 }
 .input_box i {
   position: absolute;
@@ -94,7 +97,7 @@ body{
 }
 
 .remember-forgot a{
-  color:#fff;
+  color:#978484;
   text-decoration: none;
 }
 
@@ -104,14 +107,14 @@ body{
 .wrapper .btn{
   width: 100%;
   height: 45px;
-  background:#fff;
+  background:#fdfbfb;
   border: none;
   outline: none;
   border-radius: 40px;
   box-shadow: 0 0 10px rgba(0, 0 ,0 , .1);
   cursor: pointer;
   font-size: 16px;
-  color: #333;
+  color: #423d3d;
   font-weight: 600;
 }
 .wrapper .register_link{
@@ -120,7 +123,7 @@ body{
   margin-top: 20px 0 15px;
 }
 .register_link p a{
-  color: #fff;
+  color: #6e5f5f;
   text-decoration: none;
   font-weight: 600;
 }

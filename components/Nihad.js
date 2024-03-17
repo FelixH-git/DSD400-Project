@@ -9,6 +9,7 @@ const Nihad = () => {
     };
 
     return (
+        <body className="bodytest">
         <div className="wrapper">
             <form className="Login_form">
                 <h1>Login</h1>
@@ -31,6 +32,7 @@ const Nihad = () => {
                 </div>
             </form>
         </div>
+        </body>
     );
 };
 
