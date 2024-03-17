@@ -31,10 +31,33 @@ export default function Home() {
     fetchUserData();
   }, []);
 
+  const handleLogout = async () =>{
+    try {
+      const response = await fetch(`/api/user/logout/`, {
+        method: 'GET',
+      });
+
+
+      const data = await response.json();
+      alert(data.message);
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+      alert(error.message);
+    }
+  };
+
   return (
     <>
       {isLoggedIn ? (
-          <CreateBook />
+          <div>
+            <CreateBook />
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button className='btn btn-danger' onClick={() =>handleLogout()}>logout</button>
+          </div>
       ) : (
         <div>
           <p>Not Logged in</p>

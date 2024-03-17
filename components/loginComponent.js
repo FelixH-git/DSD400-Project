@@ -25,6 +25,7 @@ const LoginComponent = () => {
             setEmail("");
             setPassword("");
             alert(response.data.message);
+            window.location.assign('/');
         } catch (error) {
             console.error(error);
             alert(error);
@@ -76,7 +77,7 @@ const LoginComponent = () => {
                     <button type="submit" className="btn" id="login_btn">Login</button>
 
                     <div className="register_link">
-                        <p>Don't have an account?<a href="sign_in.html" target="_self">Register</a></p>
+                        <p>Don't have an account?<a href="/register" target="_self">Register</a></p>
                     </div>
                 </form>
             </div>

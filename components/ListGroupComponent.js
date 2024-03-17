@@ -32,6 +32,7 @@ function ListGroup({ books, heading, onSelectItem }) {
 
       const data = await response.json();
       alert(data.message);
+      window.location.reload();
     } catch (error) {
       console.error(error);
       alert(error.message);
@@ -51,6 +52,7 @@ function ListGroup({ books, heading, onSelectItem }) {
 
       const data = await response.json();
       alert(data.message);
+      window.location.reload();
     } catch (error) {
       console.error(error);
       alert(error.message);

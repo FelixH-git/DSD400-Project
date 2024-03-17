@@ -27,6 +27,7 @@ const CreateUser = () => {
             setPassword("");
             setPhone("");
             alert(response.data.message);
+            window.location.assign("/login");
         } catch (error) {
             console.error(error);
             alert(error);
