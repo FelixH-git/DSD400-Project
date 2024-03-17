@@ -37,7 +37,7 @@ const CreateUser = () => {
         <div className="Allt">
         <div className="wrapper">
             <form className="Login_form" onSubmit={handleSubmit}>
-                <h1>Account Creation</h1>
+                <h1>Register</h1>
                 <div className="input_box">
                     <input 
                         type="text" 
