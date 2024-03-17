@@ -31,7 +31,9 @@ const CreateBook = () => {
     };
 
     return (
+        
         <form onSubmit={handleSubmit}>
+            <div className="divindex"><a href='/books'>Till Katalog</a></div>
             <p className="formtitle">Lägg till ny bok</p>
             <div className="divinput">
                 <div className="mb-3">

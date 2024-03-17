@@ -50,13 +50,17 @@ export default function Home() {
   return (
     <>
       {isLoggedIn ? (
+          
           <div>
+            
             <CreateBook />
             <br/>
             <br/>
             <br/>
             <br/>
+            <div className='divindex'>
             <button className='btn btn-danger' onClick={() =>handleLogout()}>logout</button>
+            </div>
           </div>
       ) : (
         <div>
