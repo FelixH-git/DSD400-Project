@@ -5,6 +5,24 @@ import User from "../../../models/userSchema";
 
 export default async function handler(req, res) {
     dbConnect();
+
+    //Pageination loading
+    if (req.method === "GET") {
+        const page = parseInt(req.query.page) || 1;
+        const limit = parseInt(req.query.limit) || 10;
+
+        try {
+            const books = await Book.find()
+                .skip((page - 1) * limit)
+                .limit(limit);
+
+            return res.status(200).json({ success: true, books });
+        } catch (error) {
+            return res.status(500).json({ success: false, error: error.message });
+        }
+    }
+
+    //Book creation
     if (req.method === "POST") {
         const cookies = parse(req.headers.cookie || '');
 

@@ -1,9 +1,24 @@
+import React, { useState, useEffect } from "react";
 import ListGroup from "./ListGroupComponent";
-import React from "react";
 
 import 'bootstrap/dist/css/bootstrap.css';
+
 function ViewBook() {
-  let items = ["bok1", "bok2", "bok3", "bok4"];
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
+  const fetchBooks = async () => {
+    try {
+      const res = await fetch("/api/book");
+      const data = await res.json();
+      setBooks(data.books); 
+    } catch (error) {
+      console.error("Error fetching books:", error);
+    }
+  };
 
   const handleSelectItem = (item) => {
     console.log(item);
@@ -12,7 +27,7 @@ function ViewBook() {
   return (
     <div>
       <ListGroup
-        items={items}
+        items={books.map(book => book.title)} 
         heading={"Böcker"}
         onSelectItem={handleSelectItem}
       />
@@ -21,5 +36,3 @@ function ViewBook() {
 }
 
 export default ViewBook;
-
-//yep
