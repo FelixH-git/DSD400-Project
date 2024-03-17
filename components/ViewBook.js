@@ -5,32 +5,51 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 function ViewBook() {
   const [books, setBooks] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
-    fetchBooks();
-  }, []);
+    fetchBooks(currentPage);
+  }, [currentPage]);
 
-  const fetchBooks = async () => {
+  const fetchBooks = async (page) => {
     try {
-      const res = await fetch("/api/book");
+      const res = await fetch(`/api/book?page=${page}`);
       const data = await res.json();
-      setBooks(data.books); 
+      setBooks(data.books);
+      setTotalPages(data.totalPages);
     } catch (error) {
-      console.error("Error fetching books:", error);
+      console.error(error);
     }
   };
 
   const handleSelectItem = (item) => {
-    console.log(item);
+  };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   return (
     <div>
       <ListGroup
-        items={books.map(book => book.title)} 
+        books={books}
         heading={"Böcker"}
         onSelectItem={handleSelectItem}
       />
+      <div className="pagination">
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
+        <span>{currentPage} / {totalPages}</span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
+      </div>
     </div>
   );
 }

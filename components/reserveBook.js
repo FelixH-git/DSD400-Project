@@ -8,7 +8,7 @@ const ReserveBook = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-
+            console.log(bookID);
             const response = await axios.post(`/api/book/reserve/${bookID}`);
 
             setBookID("");

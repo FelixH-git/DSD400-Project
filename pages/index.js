@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css'
 import CreateBook from '../components/createBookComponent'
 import CreateUser from '../components/createUserComponent'
 import ReserveBook from '../components/reserveBook'
-import ViewBook from '../components/ViewBook'
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react'
 
@@ -17,7 +16,7 @@ export default function Home() {
       <CreateBook></CreateBook>
       <ReserveBook></ReserveBook>
       <CreateUser></CreateUser>
-      <ViewBook />
+
     </>
   )
 }

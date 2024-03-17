@@ -12,11 +12,17 @@ export default async function handler(req, res) {
         const limit = parseInt(req.query.limit) || 10;
 
         try {
+
+            const totalBooksCount = await Book.countDocuments();
+            const totalPages = Math.ceil(totalBooksCount / limit);
+
             const books = await Book.find()
+                .populate('owner')
+                .populate('reserved')
                 .skip((page - 1) * limit)
                 .limit(limit);
 
-            return res.status(200).json({ success: true, books });
+            return res.status(200).json({ success: true, books , totalPages});
         } catch (error) {
             return res.status(500).json({ success: false, error: error.message });
         }
