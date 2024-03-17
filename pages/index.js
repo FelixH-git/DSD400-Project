@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import CreateBook from '../components/createBookComponent'
-import CreateUser from '../components/createUserComponent'
-import ReserveBook from '../components/reserveBook'
+
+
 import 'bootstrap/dist/css/bootstrap.css';
 import React from 'react'
 
@@ -14,8 +14,7 @@ export default function Home() {
   return (
     <>
       <CreateBook></CreateBook>
-      <ReserveBook></ReserveBook>
-      <CreateUser></CreateUser>
+      
 
     </>
   )
