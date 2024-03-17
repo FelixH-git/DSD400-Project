@@ -1,7 +1,8 @@
 
 
 import React from 'react'
-import CreateUser from '../components/signUpComponent';
+import CreateUser from '../components/createUserComponent'
+
 
 
 export default function signuptest() {
