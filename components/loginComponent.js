@@ -42,49 +42,46 @@ const LoginComponent = () => {
         }
     };
 
-    return (
-    <>
+    return (  
+            <div className="Allt">
+            <div className="wrapper">
+                <form className="Login_form" onSubmit={handleSubmit}>
+                    <h1>Login</h1>
+                    <div className="input_box">
+                        <input 
+                            type="text" 
+                            placeholder="Email" 
+                            aria-describedby="emailHelp" 
+                            id="email"
+                            name="email"
+                            value={email}
+                            onChange={(event) => setEmail(event.target.value)}
+                        />
+                    </div>
+                    <div className="input_box">
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            aria-describedby="emailHelp"
+                            id="password"
+                            name="password"
+                            value={password}
+                            onChange={(event) => setPassword(event.target.value)}
+                        />
+                    </div>
+                    <div className="remember-forgot">
+                        <label><input type="checkbox"/>Remember me</label>
+                        <a href="">Forgot password</a>
+                    </div>
+                    <button type="submit" className="btn" id="login_btn">Login</button>
 
+                    <div className="register_link">
+                        <p>Don't have an account?<a href="sign_in.html" target="_self">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            </div>
         
-        <form onSubmit={handleSubmit}>
-        <p class="formtitle">Logga in</p>
-            <div class="divinput">
-            <div class="mb-3">
-            <label htmlFor="email" class="form-label">Email Address:</label>
-            <input
-                
-                class="form-control"
-                aria-describedby="emailHelp"
-                type="text" // Ändra till type="email" -- text för testing av admin
-                id="email"
-                name="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-            />
-            
-            </div>
-            </div>
-
-            <div class="divinput">
-            <label htmlFor="password" class="form-label">Password:</label>
-            <input
-                
-                class="form-control"
-                aria-describedby="emailHelp"
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-            />
-            </div>
-            <button type="submit" class="btn btn-primary">login</button>
-        </form>
-
-        <form onSubmit={handleLogout}>
-            <button type="submit" class="btn btn-primary">Logout</button>
-        </form>
-    </>
     );
 };
 

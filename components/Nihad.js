@@ -9,17 +9,19 @@ const Nihad = () => {
     };
 
     return (
-        <body className="bodytest">
+        
         <div className="wrapper">
             <form className="Login_form">
                 <h1>Login</h1>
                 <div className="input_box">
-                    <input type="text" placeholder="Username" required/>
-                    <i className='bx bxs-user'></i>
+                    <input type="email" placeholder="Email" 
+                    />
+                    
                 </div>
                 <div className="input_box">
-                    <input type="password" placeholder="Password" required/>
-                    <i className='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Password" 
+                    />
+                    
                 </div>
                 <div className="remember-forgot">
                     <label><input type="checkbox"/>Remember me</label>
@@ -32,7 +34,7 @@ const Nihad = () => {
                 </div>
             </form>
         </div>
-        </body>
+    
     );
 };
 

@@ -10,6 +10,7 @@ const Signup = () => {
     };
 
     return (
+        <div className='Allt'>
         <div class="wrapper">
         <form class="sign_in_form">
             <h1>sign in</h1>
@@ -27,6 +28,7 @@ const Signup = () => {
             </div>
             <button type="submit" onclick="" class="btn">Sign in</button>
         </form>
+    </div>
     </div>
 
     );

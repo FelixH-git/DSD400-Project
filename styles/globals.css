@@ -37,18 +37,17 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: black;
-  background-color: black;
-  /* background: url('img.jpg');                   FUNKAR INTE -------------------*/ 
+.Allt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    background-color: rgb(202, 41, 41);                   
 }
 .wrapper{
   width: 420px;
-  color: #685f5f;
+  color: #fff;
   border-radius: 10px;
   padding: 30px 40px;
 }
@@ -75,7 +74,7 @@ body{
   padding: 20px 45px 20px 20px;
 } 
 .input_box input::placeholder{
-  color: #796a6a;
+  color: #fff;
 }
 .input_box i {
   position: absolute;
@@ -97,7 +96,7 @@ body{
 }
 
 .remember-forgot a{
-  color:#978484;
+  color:#fff;
   text-decoration: none;
 }
 
@@ -114,7 +113,7 @@ body{
   box-shadow: 0 0 10px rgba(0, 0 ,0 , .1);
   cursor: pointer;
   font-size: 16px;
-  color: #423d3d;
+  color: #fff;
   font-weight: 600;
 }
 .wrapper .register_link{
@@ -123,7 +122,7 @@ body{
   margin-top: 20px 0 15px;
 }
 .register_link p a{
-  color: #6e5f5f;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
 }
