@@ -64,7 +64,7 @@ function ListGroup({ books, heading, onSelectItem }) {
   return (
     <>
       <h1>{heading}</h1>
-      {books.length === 0 && <p>No items found</p>}
+      {books.length === 0 && <p>Inga böcker funna</p>}
       <ul className="list-group">
         {books.map((book, index) => (
           <li
@@ -81,25 +81,28 @@ function ListGroup({ books, heading, onSelectItem }) {
           >
             <div className="d-flex justify-content-between align-items-center">
               <div>
-                <h5 className="mb-1">{book.title}</h5>
+
+                <h5 className="mb-1">   {book.title}</h5>
+                
                 {book.img && (
                   <img
                     src={baseUrl + book.img} 
                     alt={book.title}
-                    style={{ maxWidth: "100px" }}
+                    style={{ maxWidth: "175px" }}
                   />
                 )}
-                <p className="mb-1">Price: {book.price}</p>
-                <p className="mb-1">Seller email: {book.owner.email}</p>
-                <p className="mb-1">Seller phone: {book.owner.phone}</p>
+                
+                <p className="mb-1">Pris: {book.price} kr</p>
+                <p className="mb-1">Säljar e-post: {book.owner.email}</p>
+                <p className="mb-1">Säljar telefonnummer: {book.owner.phone}</p>
                 {book.reserved ? (
-                  <p className="mb-1">Reserved by: {book.reserved.email}</p>
+                  <p className="mb-1">Reserverad av: {book.reserved.email}</p>
                 ) : (
                   <button
                     className="btn btn-primary"
                     onClick={() => handleReserveClick(book._id)}
                   >
-                    Reserve
+                    Reservera
                   </button>
                 )}
 
@@ -108,7 +111,7 @@ function ListGroup({ books, heading, onSelectItem }) {
                     className="btn btn-danger"
                     onClick={() => handleAdmin(book._id)}
                   >
-                    Remove
+                    Ta bort
                   </button>
                 ) : null}
               </div>

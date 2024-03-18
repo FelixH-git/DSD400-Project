@@ -46,9 +46,9 @@ function ViewBook() {
         onSelectItem={handleSelectItem}
       />
       <div className="pagination">
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>Previous</button>
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>Föregående sida</button>
         <span>{currentPage} / {totalPages}</span>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Next</button>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>Nästa sida</button>
       </div>
     </div>
   );
